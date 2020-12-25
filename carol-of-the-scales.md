@@ -1,5 +1,3 @@
-# Carol of the Scales
-
 *a.k.a. learning Python for Christmas*
 
 ## Intro
@@ -57,12 +55,12 @@ of the hundredth line in the text file.
 
 What do you get? Does it match *the answer*[^ans2]?
 
-# Problem 3
+## Problem 3
 
 **The Boss recommends:** *No new recommendations.*
 
 Huzzah! Your ability to break a sentence into words is... well, to be honest, it leaves something to
-be desired. Maybe reporting "Hamlet" instead of "Hamlet's" isn't going to get you that pay raise,
+be desired. Maybe reporting "Hamlet" instead of "Hamlet\'s" isn't going to get you that pay raise,
 but you'll have to get back to that later. Your boss just messaged you with a new requirement for
 the project. It is absolutely imperative that drivers be able to query the number of paragraphs in
 *A Christmas Carol*. This is now your top priority; never mind the `get_first_word` function!
@@ -72,7 +70,7 @@ this problem, a paragraph is defined as any consecutive series of non-blank line
 
 For example:
 
-```text
+```txt
 It was the best of times.
 It was the worst of times.
 
@@ -134,7 +132,7 @@ What output does your program give? Does it match *the answer*[^ans4a]?
 
 Oops! It looks like that `words` function was still a little bit naive. It ended up splitting:
 
-"three--had 'em up in their places--four, five, six--barred"
+"three\-\-had \'em up in their places\-\-four, five, six\-\-barred"
 
 into
 
@@ -144,7 +142,7 @@ While it did a great job splitting up words by spaces, it didn't split on punctu
 that, but it left trailing commas in several of the words! You can just imagine drivers asking for
 the words on line one thousand four hundred and fifty seven and the radio dumbly spitting out,
 "three dash dash had 'em up in their places dash dash four comma five comma six dash dash barred!"
-And never mind looking up the *meaning* of "three--had." No car's gonna find *that* in the
+And never mind looking up the *meaning* of "three\-\-had." No car's gonna find *that* in the
 dictionary. To fix this, you'll need to come up with a better definition of a word.
 
 Rewrite your `words` function. For this final iteration, a word is defined as any consecutive series
@@ -153,23 +151,23 @@ of a word and must always be followed by an alphabetic character.
 
 For example, the following are considered words:
 
-- 'em
-- ma'am
+- \'em
+- ma\'am
 - apple
 - door-nail
-- '''''''
-- this-is-a'''silly-wo'rd'
+- \'\'\'\'\'\'\'
+- this-is-a\'\'\'silly-wo\'rd\'
 
 ... while these are not:
 
 - 123
-- apple-'''
+- apple-\'\'\'
 - -something
 - half-
 
 With your new `words` function, the above line:
 
-"three--had 'em up in their places--four, five, six--barred"
+"three\-\-had \'em up in their places\-\-four, five, six\-\-barred"
 
 should be split into:
 
@@ -258,5 +256,5 @@ Python for great good while you were at it!
 [^ans3]: 786
 [^ans4a]: 8
 [^ans4b]: 11
-[^ans5]: "he", occurs 488 times
+[^ans5]: "it", occurs 531 times
 [^ans6]: 2510116

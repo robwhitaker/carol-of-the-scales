@@ -158,7 +158,7 @@ def problem_5():
     # to smallest).
     word_counts_list.sort(key=second_element, reverse=True)
     # Return the third element in the list
-    return word_counts_list[7]
+    return word_counts_list[6]
 
 # Problem 6
 
