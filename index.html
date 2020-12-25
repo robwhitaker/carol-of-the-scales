@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Carol of the Scales</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Carol of the Scales</h1>
+</header>
+<p><em>a.k.a. learning Python for Christmas</em></p>
+<h2 id="intro">Intro</h2>
+<p>It’s Christmas morning and you’re opening Christmas gifts with the family. At least, that’s what you’re supposed to be doing, but your boss called a half hour ago, excitedly shouting a series of requests through the phone. They just had the <em>best</em> idea. Yeah, yeah, they know it’s Christmas, but it’s a Christmas type idea. They just want you to write a program that can analyze Charles Dickens’ <em>A Christmas Carol</em> and figure out a couple stats about it. Then people could query the story through <em>their car radios</em>! It’s brilliant! Sales will soar!</p>
+<p>Oh, and by the way, the program has to be written in Python because… well, your boss saw a funny meme of a snake in a Santa Hat, and now they’re convinced that snakes are the spirit animal of Christmas and that all Christmas-themed programs must be written in “that snake language.”</p>
+<p>In the spirit of the holidays, they of course want to help you out so you can get back to your family. That’s why they sent you a <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">link to a free Python course</a> before hanging up the phone.</p>
+<h2 id="problem-1">Problem 1</h2>
+<p><strong>The Boss recommends:</strong> <em>Complete the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">Python Course</a> from the beginning through <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/intermediate-strings">Intermediate Strings</a> before tackling this problem.</em></p>
+<p>To get started analyzing text, you’ll need a handy way to break it down. And what better way to break down text than into words! But you’re still a bit lethargic from just waking up and still a bit disgruntled from being pulled away from your stocking snacks, so better take it slow to start.</p>
+<p>Write a Python function called <code>get_first_word</code> that takes in one argument–a string–and returns the first word in that string. For the purposes of this problem, a word only consists of characters in the alphabet (i.e. a-z, A-Z). If the function is given a string that does not start with a valid word, it should just give up and return empty string.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>get_first_word(<span class="st">&quot;Christmas cookies are good.&quot;</span>) <span class="op">==</span> <span class="st">&quot;Christmas&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>get_first_word(<span class="st">&quot;Don&#39;t be a Scrooge&quot;</span>) <span class="op">==</span> <span class="st">&quot;Don&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>get_first_word(<span class="st">&quot;??? Wow&quot;</span>) <span class="op">==</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>get_first_word(<span class="st">&quot;&quot;</span>) <span class="op">=</span> <span class="st">&quot;&quot;</span></span></code></pre></div>
+<h2 id="problem-2">Problem 2</h2>
+<p><strong>The Boss recommends:</strong> <em>Complete the file reading lessons from the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">Python Course</a> before tackling this problem:</em></p>
+<ul>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/reading-files">Reading Files</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/files-as-a-sequence">Files as a Sequence</a></em></li>
+</ul>
+<p>Well, you have a function to split a sentence into words… sort of. It’s time to give it a try on your actual input. Download <a href="https://www.gutenberg.org/files/46/46-0.txt">A Christmas Carol</a>, and save it inside your project folder as <code>a-christmas-carol.txt</code>. Once you’ve done that, test your function by using it to get the first word of the hundredth line in the text file.</p>
+<p>What do you get? Does it match <em>the answer</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>?</p>
+<h2 id="problem-3">Problem 3</h2>
+<p><strong>The Boss recommends:</strong> <em>No new recommendations.</em></p>
+<p>Huzzah! Your ability to break a sentence into words is… well, to be honest, it leaves something to be desired. Maybe reporting “Hamlet” instead of “Hamlet's” isn’t going to get you that pay raise, but you’ll have to get back to that later. Your boss just messaged you with a new requirement for the project. It is absolutely imperative that drivers be able to query the number of paragraphs in <em>A Christmas Carol</em>. This is now your top priority; never mind the <code>get_first_word</code> function!</p>
+<p>Write a program that reads <code>a-christmas-carol.txt</code> and returns the number of paragraphs in it. For this problem, a paragraph is defined as any consecutive series of non-blank lines.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>It was the best of times.</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>It was the worst of times.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>I don&#39;t know...</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>the rest of that story.</span></code></pre></div>
+<p>would be considered three (3) paragraphs.</p>
+<p>What output does your program give? Does it match <em>the answer</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>?</p>
+<h2 id="problem-4">Problem 4</h2>
+<p><strong>The Boss recommends:</strong> <em>Complete the lists lessons from the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">Python Course</a> before tackling this problem:</em></p>
+<ul>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/python-lists">Python Lists</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/working-with-lists">Working with Lists</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/strings-and-lists">Strings and Lists</a></em></li>
+</ul>
+<p>Now that the urgent paragraph-counting issue is dealt with and drivers can easily find out the number of paragraphs in <em>A Christmas Carol</em>, you can turn your attention back to the more interesting matter of splitting a string into words. Clearly, taking only the first alphabetical characters you see isn’t quite getting you the right results. On top of that, having only the first word in a string isn’t particularly useful. It would be way better if you had a list containing ALL the words in the string.</p>
+<h3 id="a">4a</h3>
+<p>Well, as it turns out, in the English language words tend to be separated by blank spaces. You can use that! First, we’ll want a better function for breaking a sentence into words. Write a <code>words</code> function that splits up a string into a list of words. For this function, a word is defined as any consecutive series of non-whitespace characters.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>words(<span class="st">&quot;Christmas cookies are good.&quot;</span>) <span class="op">==</span> [<span class="st">&quot;Christmas&quot;</span>, <span class="st">&quot;cookies&quot;</span>, <span class="st">&quot;are&quot;</span>, <span class="st">&quot;good.&quot;</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>words(<span class="st">&quot;Don&#39;t    be  a       Scrooge&quot;</span>) <span class="op">==</span> [<span class="st">&quot;Don&#39;t&quot;</span>, <span class="st">&quot;be&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;Scrooge&quot;</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>words(<span class="st">&quot;??? Wow&quot;</span>) <span class="op">==</span> [<span class="st">&quot;???&quot;</span>, <span class="st">&quot;Wow&quot;</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>words(<span class="st">&quot;&quot;</span>) <span class="op">=</span> []</span></code></pre></div>
+<p><strong>HINT:</strong> You might want to take a look at the <code>split</code> function of the <code>str</code> class.</p>
+<p>Now that you have your shiny new and improved <code>words</code> function, you ought to put that thing to use. Using your <code>words</code> function, write a program that reads in <code>a-christmas-carol.txt</code> and outputs the number of words on line 1457.</p>
+<p>What output does your program give? Does it match <em>the answer</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>?</p>
+<h3 id="b">4b</h3>
+<p>Oops! It looks like that <code>words</code> function was still a little bit naive. It ended up splitting:</p>
+<p>“three--had 'em up in their places--four, five, six--barred”</p>
+<p>into</p>
+<p><code>["three--had", "'em", "up", "in", "their", "places--four,", "five,", "six--barred"]</code></p>
+<p>While it did a great job splitting up words by spaces, it didn’t split on punctuation! Not only that, but it left trailing commas in several of the words! You can just imagine drivers asking for the words on line one thousand four hundred and fifty seven and the radio dumbly spitting out, “three dash dash had ’em up in their places dash dash four comma five comma six dash dash barred!” And never mind looking up the <em>meaning</em> of “three--had.” No car’s gonna find <em>that</em> in the dictionary. To fix this, you’ll need to come up with a better definition of a word.</p>
+<p>Rewrite your <code>words</code> function. For this final iteration, a word is defined as any consecutive series of alphabetic characters, apostrophes, and hyphens where a hyphen cannot be at the beginning or end of a word and must always be followed by an alphabetic character.</p>
+<p>For example, the following are considered words:</p>
+<ul>
+<li>'em</li>
+<li>ma'am</li>
+<li>apple</li>
+<li>door-nail</li>
+<li>'''''''</li>
+<li>this-is-a'''silly-wo'rd'</li>
+</ul>
+<p>… while these are not:</p>
+<ul>
+<li>123</li>
+<li>apple-'''</li>
+<li>-something</li>
+<li>half-</li>
+</ul>
+<p>With your new <code>words</code> function, the above line:</p>
+<p>“three--had 'em up in their places--four, five, six--barred”</p>
+<p>should be split into:</p>
+<p><code>["three", "had", "'em", "up", "in", "their", "places", "four", "five", "six", "barred"]</code></p>
+<p>Now you can try again with this fanciest of <code>words</code> functions. How many words does it count on line 1457? Does it match <em>the answer</em><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>?</p>
+<h2 id="problem-5">Problem 5</h2>
+<p><strong>The Boss recommends:</strong> <em>Complete the dictionaries and tuples lessons from the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">Python Course</a> before tackling this problem:</em></p>
+<ul>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/python-dictionaries">Python Dictionaries</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/dictionaries-common-applications">Dictionaries: Common Applications</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/dictionaries-and-loops">Dictionaries and Loops</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/the-tuples-collection">The Tuples Collection</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/comparing-and-sorting-tuples">Comparing and Sorting Tuples</a></em></li>
+</ul>
+<p>With your new <code>words</code> function working as expected, you can now count words even more accurately than Microsoft’s online version of Word! Now you can really give those drivers some deep insights about Charles Dickens’ <em>A Christmas Carol</em>. For example, you could answer questions like, “What is the seventh (7th) most common word in <code>a-christmas-carol.txt</code> and how many times does it occur?”</p>
+<p>No, seriously, answer the question. The sooner your write a program to do it, the sooner you can get back to your Christmas cookies!</p>
+<p>What output does your program give? Does it match <em>the answer</em><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>?</p>
+<h2 id="problem-6">Problem 6</h2>
+<p><strong>The Boss recommends:</strong> <em>Complete the objects lessons from the <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/">Python Course</a> before tackling this problem:</em></p>
+<ul>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/python-objects">Python Objects</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/objects-a-sample-class">Objects: A Sample Class</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/object-lifecycle">Object Lifecycle</a></em></li>
+<li><em><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/python-for-everybody/objects-inheritance">Objects: Inheritance</a></em></li>
+</ul>
+<p>You’re just about to turn in your program to your boss <em>when your boss calls you</em>. They just had the second best idea they’ve had all day (the first being to make you work on Christmas)! They’ve been reading up on this hot new trend called Object Oriented Programming (you resist telling them that it’s not exactly a <em>new</em> trend) and that you absolutely <em>must</em> represent paragraphs as objects. Customers love objects.</p>
+<p>They were so excited about this idea that <em>they already wrote a program using the interface they had in mind</em> and sent their program over (<code>objects_are_cool.py</code> in your project folder). You just have to write a class to represent a paragraph according to their specs.</p>
+<p>In your project folder, create a file called <code>paragraph.py</code>. Inside it, define a class called <code>Paragraph</code>. Its constructor should take a string–the text of the paragraph–as a parameter. It should also contain a method–<code>word_occurrences</code>–which takes a string (a word) and returns the number of times that word occurs in the paragraph. This search should be case-insensitive.</p>
+<p><strong>HINT:</strong> You probably want to make use of functions you’ve already written.</p>
+<p>When you have created the class, run your boss’ program with <code>python3 objects_are_cool.py</code>. What does this super cool program output? Is it the <em>right answer</em><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>?</p>
+<h2 id="merry-christmas">Merry Christmas</h2>
+<p>You’ve done it! You’ve completed your impromptu Christmas assignment and learned yourself some Python for great good while you were at it!</p>
+<p><strong>Now go eat some Christmas cookies :)</strong></p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>“Hamlet”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>786<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>8<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>11<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>“it”, occurs 531 times<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>2510116<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
